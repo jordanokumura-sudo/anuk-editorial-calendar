@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ANUK 2026 Annual Editorial Calendar</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f8f9fa;color:#333;font-size:14px}
+header{background:#9ecd51;color:#fff;padding:14px 20px;display:flex;align-items:center;gap:12px}
+header h1{font-size:1.25rem;font-weight:700;letter-spacing:-.01em}
+header p{font-size:.8rem;opacity:.85;margin-top:2px}
+.logo-mark{background:#fff;color:#9ecd51;font-weight:900;font-size:.85rem;padding:4px 8px;border-radius:4px;letter-spacing:.05em}
+.controls{background:#fff;border-bottom:2px solid #e7e7e7;padding:10px 20px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.controls label{font-size:.75rem;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:.05em;margin-right:4px}
+.mbtn{padding:4px 11px;border-radius:14px;border:1px solid #e7e7e7;background:#fff;cursor:pointer;font-size:.78rem;color:#6b7280;transition:all .15s}
+.mbtn:hover{background:#f0f9e8;border-color:#9ecd51;color:#558b2f}
+.mbtn.active{background:#9ecd51;color:#fff;border-color:#9ecd51;font-weight:600}
+.legend{display:flex;gap:6px;padding:8px 20px;flex-wrap:wrap;background:#fff;border-bottom:1px solid #e7e7e7;font-size:.72rem}
+.leg-item{display:flex;align-items:center;gap:4px;color:#6b7280;white-space:nowrap}
+.leg-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.leg-sep{display:flex;align-items:center;gap:6px;padding:4px 20px;background:#fffde7;border-bottom:1px solid #e7e7e7;font-size:.72rem;color:#6b7280}
+.leg-sep span{display:flex;align-items:center;gap:4px}
+.table-wrap{overflow-x:auto;max-height:calc(100vh - 170px);overflow-y:auto}
+table{width:100%;border-collapse:collapse;min-width:900px}
+thead th{background:#f8f9fa;border-bottom:2px solid #e7e7e7;padding:8px 12px;text-align:left;font-size:.72rem;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;z-index:10}
+tbody tr{border-bottom:1px solid #f0f0f0;transition:background .1s}
+tbody tr:hover{background:#f0f9e8}
+tbody tr.hidden{display:none}
+td{padding:9px 12px;vertical-align:top}
+.wk-num{font-weight:700;color:#9ecd51;font-size:1rem}
+.wk-dates{font-size:.72rem;color:#6b7280;white-space:nowrap}
+.month-tag{font-size:.7rem;color:#7fb33e;text-transform:uppercase;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+.chips-cell{line-height:1.8}
+.chip{display:inline-block;font-size:.68rem;padding:2px 8px;border-radius:10px;margin:1px 2px 1px 0;white-space:nowrap;line-height:1.6}
+.show-chip{background:#fff8e1;color:#e65100;border:1px solid #ffcc02;font-weight:600}
+.moment-chip{background:#fff3e0;color:#bf360c;border:1px solid #ffcc80}
+.trans-chip{background:#e8eaf6;color:#283593;border:1px solid #c5cae9}
+.empty{color:#ccc;font-style:italic;font-size:.72rem}
+.stat-bar{background:#7fb33e;color:#fff;font-size:.72rem;padding:4px 20px;display:flex;gap:16px}
+.stat-bar span{opacity:.9}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-mark">ANUK</div>
+  <div>
+    <h1>2026 Annual Editorial Calendar</h1>
+    <p>52-week planning guide · AndNowUKnow · Category peaks, trade shows, promotional moments</p>
+  </div>
+</header>
+<div class="controls">
+  <label>Filter by Month:</label>
+  <button class="mbtn active" data-m="all">All</button><button class="mbtn" data-m="January">Jan</button><button class="mbtn" data-m="February">Feb</button><button class="mbtn" data-m="March">Mar</button><button class="mbtn" data-m="April">Apr</button><button class="mbtn" data-m="May">May</button><button class="mbtn" data-m="June">Jun</button><button class="mbtn" data-m="July">Jul</button><button class="mbtn" data-m="August">Aug</button><button class="mbtn" data-m="September">Sep</button><button class="mbtn" data-m="October">Oct</button><button class="mbtn" data-m="November">Nov</button><button class="mbtn" data-m="December">Dec</button>
+</div>
+<div class="legend">
+  <strong style="font-size:.72rem;color:#555;margin-right:4px">CATEGORIES:</strong>
+  <span class="leg-item"><span class="leg-dot" style="background:#fce4ec;border:1px solid #b71c1c;"></span>Berries</span><span class="leg-item"><span class="leg-dot" style="background:#fff3e0;border:1px solid #e65100;"></span>Tree Fruits</span><span class="leg-item"><span class="leg-dot" style="background:#fffde7;border:1px solid #f57f17;"></span>Citrus</span><span class="leg-item"><span class="leg-dot" style="background:#f1f8e9;border:1px solid #558b2f;"></span>Tropical/Avocado</span><span class="leg-item"><span class="leg-dot" style="background:#e8f5e9;border:1px solid #2e7d32;"></span>Leafy Greens</span><span class="leg-item"><span class="leg-dot" style="background:#e0f2f1;border:1px solid #00695c;"></span>Veg (Broc/Cali/Sprouts)</span><span class="leg-item"><span class="leg-dot" style="background:#e0f7fa;border:1px solid #00838f;"></span>Cucurbits/Melons</span><span class="leg-item"><span class="leg-dot" style="background:#fce4ec;border:1px solid #880e4f;"></span>Alliums</span><span class="leg-item"><span class="leg-dot" style="background:#efebe9;border:1px solid #5d4037;"></span>Root Veg</span><span class="leg-item"><span class="leg-dot" style="background:#f3e5f5;border:1px solid #6a1b9a;"></span>Specialty</span><span class="leg-item"><span class="leg-dot" style="background:#e3f2fd;border:1px solid #1565c0;"></span>Greenhouse</span><span class="leg-item"><span class="leg-dot" style="background:#fbe9e7;border:1px solid #bf360c;"></span>Peppers</span><span class="leg-item"><span class="leg-dot" style="background:#ffebee;border:1px solid #c62828;"></span>Field/PA Tomatoes</span>
+</div>
+<div class="leg-sep">
+  <span>📍 <strong>Trade Show</strong></span>
+  <span style="margin-left:12px">⭐ <strong>Promo Moment</strong></span>
+  <span style="margin-left:12px">🔄 <strong>Regional Transition</strong></span>
+</div>
+<div class="stat-bar">
+  <span>📅 52 Weeks · 18 Trade Shows · 45 Categories Tracked</span>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+  <th style="width:90px">Week</th>
+  <th style="width:110px">Month</th>
+  <th>Peak Categories &amp; Regions</th>
+  <th style="width:38%">Shows · Moments · Transitions</th>
+</tr>
+</thead>
+<tbody id="cal-body">
+<tr data-month="January">
+  <td><span class="wk-num">W1</span><br><span class="wk-dates">Jan 1–4</span></td>
+  <td><span class="month-tag">January</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Early</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navels/Limes/Grapefruit</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Culture Peak</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Peppers · Lit Culture Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL + Mexico</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Argentina Peak</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Yuma Start</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Peru YR; Mexico Caborca Starts</span> <span class="chip" style="background:#fce4ec;color:#880e4f;">Onions · WA/ID/OR Storage Peak</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ New Year Retail Push</span></td>
+</tr><tr data-month="January">
+  <td><span class="wk-num">W2</span><br><span class="wk-dates">Jan 5–11</span></td>
+  <td><span class="month-tag">January</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Ramp</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navel/Blood/Mandarin</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL + Mexico Peak</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · Storage (NC/CA)</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · Storage (WA/NY/MI/Chile/NZ)</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Ecuador + Peru</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Mushrooms · CA Peak Season</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Carrots · CA/Canada/Guatemala YR</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Winter Fancy Foods · San Diego</span> <span class="chip moment-chip">⭐ FPAA SWIPE Outreach begins</span></td>
+</tr><tr data-month="January">
+  <td><span class="wk-num">W3</span><br><span class="wk-dates">Jan 12–18</span></td>
+  <td><span class="month-tag">January</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · Navel/Blood/Mandarin/Lime</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL Steady; Mexico Peak</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Yuma</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico Avail; FL Avail</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Mexico Caborca Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Pears · WA Available</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 FPAA SWIPE · Nogales</span> <span class="chip moment-chip">⭐ Lunar New Year — Asian Veg, Citrus, Bok Choy</span></td>
+</tr><tr data-month="January">
+  <td><span class="wk-num">W4</span><br><span class="wk-dates">Jan 19–25</span></td>
+  <td><span class="month-tag">January</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Early Stage</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · Mexico PEAK; FL Steady</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#fce4ec;color:#880e4f;">Onions · WA/ID/OR Peak Storage</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Varieties</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Mexico + Guatemala</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Celery · CA/AZ/FL/TX/Mexico</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="February">
+  <td><span class="wk-num">W5</span><br><span class="wk-dates">Jan 26–Feb 1</span></td>
+  <td><span class="month-tag">February</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Ramp</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL + Mexico</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navels</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Mexico Caborca Peak</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico Peak; FL Avail</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · Storage</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Heart Health Month begins</span></td>
+</tr><tr data-month="February">
+  <td><span class="wk-num">W6</span><br><span class="wk-dates">Feb 2–8</span></td>
+  <td><span class="month-tag">February</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL + Mexico</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#880e4f;">Onions · Mexico Starts</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Melons · Mexico Honeydew PEAK late Feb</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Valentine's Day (Feb 14) — Strawberries, Citrus, Tomatoes</span> <span class="chip moment-chip">⭐ National Sweet Potato Month</span></td>
+</tr><tr data-month="February">
+  <td><span class="wk-num">W7</span><br><span class="wk-dates">Feb 9–15</span></td>
+  <td><span class="month-tag">February</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Peak; Chile Starts mid-Feb</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak; FL Starts mid-Feb</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL Steady; CA Ramping mid-Feb</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico Peak</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico Starts Feb</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · Mexico Starts first week</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Canadian Agriculture Day (Feb 13)</span></td>
+</tr><tr data-month="February">
+  <td><span class="wk-num">W8</span><br><span class="wk-dates">Feb 16–22</span></td>
+  <td><span class="month-tag">February</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Peak + Chile Avail</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak; FL Steady</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA Ramping; FL Steady; Mexico Peak</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Peak</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico + Ecuador + Peru</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Melons · Mexico Honeydew PEAK</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Strawberry Day (Feb 27)</span> <span class="chip trans-chip">🔄 Stonefruit Chile season wrapping</span></td>
+</tr><tr data-month="February">
+  <td><span class="wk-num">W9</span><br><span class="wk-dates">Feb 23–Mar 1</span></td>
+  <td><span class="month-tag">February/March</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; CA Starts</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma Tapering; Salinas Approaching</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Winding; Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak; FL Steady</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA Steady; FL Steady; Mexico</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico + Peru</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico Peak</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico PEAK Starts</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 SEPC Southern Exposure · Orlando</span> <span class="chip moment-chip">⭐ National Nutrition Month begins</span> <span class="chip trans-chip">🔄 Yuma → Salinas Transition Beginning (Lettuce, Broccoli, Cauliflower)</span></td>
+</tr><tr data-month="March">
+  <td><span class="wk-num">W10</span><br><span class="wk-dates">Mar 2–8</span></td>
+  <td><span class="month-tag">March</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Starts; Mexico Heavy</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas CA Early</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Peru Ends; Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak; FL Steady; CA Avail</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA Steady; FL Steady</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico PEAK Mar–May</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico + Peru</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Mexico Caborca Peak (Jan–May)</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Yuma + Mexico</span></td>
+  <td class="chips-cell"><span class="chip trans-chip">🔄 Yuma → Salinas: Lettuce, Broccoli, Cauliflower Active</span></td>
+</tr><tr data-month="March">
+  <td><span class="wk-num">W11</span><br><span class="wk-dates">Mar 9–15</span></td>
+  <td><span class="month-tag">March</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Mission/Calavo Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Building</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA + FL + Mexico</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Steady; Chile Peak; CA Avail</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico PEAK</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Carrots · CA Peak (YR); Canada Shoulder</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Celery · CA/AZ/FL/Mexico</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Ag Day (Mar 19) — Easter prep: Asparagus, Potatoes, Carrots</span></td>
+</tr><tr data-month="March">
+  <td><span class="wk-num">W12</span><br><span class="wk-dates">Mar 16–22</span></td>
+  <td><span class="month-tag">March</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Mexico</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas CA</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Steady; Chile Winding Late Mar</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Peru YR + Mexico Caborca</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico Peak</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico + Peru</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · FL Starts Mar; Mexico + Guatemala</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="March">
+  <td><span class="wk-num">W13</span><br><span class="wk-dates">Mar 23–29</span></td>
+  <td><span class="month-tag">March</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Mexico</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas CA</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Chile Peak; Peru Gone</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Steady; CA Avail; Mexico Avail</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico PEAK</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · FL + Mexico + Guatemala</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Melons · Mexico Honeydew Peak</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Mexico Hermosillo Starts</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="April">
+  <td><span class="wk-num">W14</span><br><span class="wk-dates">Mar 30–Apr 5</span></td>
+  <td><span class="month-tag">April</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Mexico</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas CA</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Chile Winding; Mexico Approaching</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK; FL Winding</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Peak; GA Approaching mid-Apr</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Canada PEAK Kicks Off</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA Coachella Starts; Mexico Winding</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico (Feb–Oct)</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Carrot Day (Apr 4) — Earth Month Begins</span> <span class="chip trans-chip">🔄 Yuma → Salinas Transition Active</span></td>
+</tr><tr data-month="April">
+  <td><span class="wk-num">W15</span><br><span class="wk-dates">Apr 6–12</span></td>
+  <td><span class="month-tag">April</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Mexico</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Starts Early Apr</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Peak; GA Starts mid-Apr</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA Late Apr Start</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Peru + Mexico + Michigan approaching</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA Coachella; Mexico winding</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Women's Fresh Perspectives Conf · Carlsbad</span> <span class="chip moment-chip">⭐ Earth Day (Apr 22) — Earth Month; Easter Window: Asparagus, Carrots, Potatoes</span></td>
+</tr><tr data-month="April">
+  <td><span class="wk-num">W16</span><br><span class="wk-dates">Apr 13–19</span></td>
+  <td><span class="month-tag">April</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Heavy Peak; Mexico Winding</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Ramping</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Peak; GA Steady</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Hermosillo + Georgia Season</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · Florida (Mar–Jun)</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Viva Fresh · San Antonio</span> <span class="chip moment-chip">⭐ National Banana Day (Apr 17)</span></td>
+</tr><tr data-month="April">
+  <td><span class="wk-num">W17</span><br><span class="wk-dates">Apr 20–26</span></td>
+  <td><span class="month-tag">April</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Peru Avail</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Avail</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK; Mexico Lower</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL + GA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Apricots Start Late Apr</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + FL + GA</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Canada/US Regular PEAK</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="May">
+  <td><span class="wk-num">W18</span><br><span class="wk-dates">Apr 27–May 3</span></td>
+  <td><span class="month-tag">May</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Heavy Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · FL Ending; GA + NC Starting</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA PEAK</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Michigan Starts (May–Jul)</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico (Feb–Oct)</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · FL + CA mid-May</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 CPMA · Toronto</span> <span class="chip moment-chip">⭐ National Salad Month; National Strawberry Month; Cinco de Mayo (May 5)</span></td>
+</tr><tr data-month="May">
+  <td><span class="wk-num">W19</span><br><span class="wk-dates">May 4–10</span></td>
+  <td><span class="month-tag">May</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Heavy</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · NC + GA Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Apricots + Apriums</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + GA + TX Start</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Melons · Mexico Cantaloupe (Apr–Nov)</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Memorial Day approaching — Onions, Potatoes, Mushrooms, Sweet Potatoes</span></td>
+</tr><tr data-month="May">
+  <td><span class="wk-num">W20</span><br><span class="wk-dates">May 11–17</span></td>
+  <td><span class="month-tag">May</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Heavy</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · NC Peak; GA; WA Starts</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA PEAK</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA Starts mid-May; FL (Mar–Jun)</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Melons · Mexico Cantaloupe PEAK</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · Planting starts NC/CA</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="May">
+  <td><span class="wk-num">W21</span><br><span class="wk-dates">May 18–24</span></td>
+  <td><span class="month-tag">May</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Mexico Winding</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · NC + GA + CA Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Plums + Early Peaches Start</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Michigan Peak</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">OPS Outreach Begins</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="May">
+  <td><span class="wk-num">W22</span><br><span class="wk-dates">May 25–31</span></td>
+  <td><span class="month-tag">May</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · NC + GA + CA Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA Peak</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico Avail</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA + FL + Mexico</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Mexico + GA</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Memorial Day — Onions, Sweet Onions, Potatoes, Mushrooms, Sweet Potatoes</span></td>
+</tr><tr data-month="June">
+  <td><span class="wk-num">W23</span><br><span class="wk-dates">Jun 1–7</span></td>
+  <td><span class="month-tag">June</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Heavy; Colombia Hass Starts</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · Mexico Winding; CA Opens</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · NJ + OR + IN + MI Starts</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · CA Ending; WA/OR Starts mid-Jun</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Apricots Wrap; Nectarines + Peaches + Pluots</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico — National Mango Month</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA + GA Mid-Jun; FL Ends</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Mango Month; National Food Safety Month (Food Safety/Tech angle)</span></td>
+</tr><tr data-month="June">
+  <td><span class="wk-num">W24</span><br><span class="wk-dates">Jun 8–14</span></td>
+  <td><span class="month-tag">June</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Heavy</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Season Opening</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · GA + OR + NJ Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Season Builds</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Full Season</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · N. CA + Nogales Peak; Baja CA Starts</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ + GA + NC + TX</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 IDDBA · Orlando</span></td>
+</tr><tr data-month="June">
+  <td><span class="wk-num">W25</span><br><span class="wk-dates">Jun 15–21</span></td>
+  <td><span class="month-tag">June</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Building</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · OR + WA + MI Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Builds</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Watsonville/Salinas Ramp</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · Northern CA + Nogales Peak</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ + GA + NC + TX</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Peak</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="June">
+  <td><span class="wk-num">W26</span><br><span class="wk-dates">Jun 22–28</span></td>
+  <td><span class="month-tag">June</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Building</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · OR + WA + BC Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Peak Building</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Field PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Plums + Peaches + Pluots</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA + GA</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Summer Fancy Foods NYC (Jun 28–30)</span></td>
+</tr><tr data-month="July">
+  <td><span class="wk-num">W27</span><br><span class="wk-dates">Jun 29–Jul 5</span></td>
+  <td><span class="month-tag">July</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Season</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · OR + WA + BC Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA PEAK Post-Jul 4</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Field PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Peaches + Pluots</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA + GA + Mexico</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · CA Peak; Mexico Winding</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Fourth of July — Watermelon, Berries, Lettuce, Onions, Potatoes, Mushrooms</span></td>
+</tr><tr data-month="July">
+  <td><span class="wk-num">W28</span><br><span class="wk-dates">Jul 6–12</span></td>
+  <td><span class="month-tag">July</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Ramps Up</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Transitions Across Regions</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · OR + WA + BC Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Watsonville PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Apricots; CA Peaches</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Melons · Mexico Cantaloupe PEAK</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA North PEAK; AZ + TX Peak</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · N. CA + Baja CA PEAK</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Organic Produce Summit · Monterey (Jul 14–16)</span> <span class="chip moment-chip">⭐ National Blueberry Month</span></td>
+</tr><tr data-month="July">
+  <td><span class="wk-num">W29</span><br><span class="wk-dates">Jul 13–19</span></td>
+  <td><span class="month-tag">July</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Ramps Up</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Peak; OR Wrapping</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · OR + WA + BC Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Nectarines + Peaches Start</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · CA Peaches + Plums</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA PEAK; NC + IN</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Mexico Avail</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 OPS (Monterey)</span></td>
+</tr><tr data-month="July">
+  <td><span class="wk-num">W30</span><br><span class="wk-dates">Jul 20–26</span></td>
+  <td><span class="month-tag">July</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Building</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Peak Continues</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA + OR Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Peaches + Nectarines</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA North PEAK; Multi-State PEAK</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Protected Ag · Mexico Middle/Peak</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas CA Peak</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 PMA Foodservice · Monterey</span></td>
+</tr><tr data-month="August">
+  <td><span class="wk-num">W31</span><br><span class="wk-dates">Jul 27–Aug 2</span></td>
+  <td><span class="month-tag">August</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak Season</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA Harvest Starts Aug</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Central Transition</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA + BC Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Nectarines/Peaches Peak</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA PEAK; NC + IN</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ + NC + TX + NM PEAK</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Wellness Month; Back-to-School — Apples, Sweet Potatoes, Carrots</span></td>
+</tr><tr data-month="August">
+  <td><span class="wk-num">W32</span><br><span class="wk-dates">Aug 3–9</span></td>
+  <td><span class="month-tag">August</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA PEAK (Aug–Oct)</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + MI Harvest; Back-to-School</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA + BC + OR Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA PEAK</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · WA Central; Season Ending</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Nectarines Peak</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA PEAK</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · N. CA + S. CA Starts</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 FPFC Expo SoCal · Long Beach</span></td>
+</tr><tr data-month="August">
+  <td><span class="wk-num">W33</span><br><span class="wk-dates">Aug 10–16</span></td>
+  <td><span class="month-tag">August</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + MI Harvest; NY Approaching</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA Peak; OR/BC Peak; NJ ending</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Peaches Peak; CA Plums Wrap</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ PEAK; Multi-State</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · S. CA Shoulders; N. CA Peak</span> <span class="chip" style="background:#fce4ec;color:#880e4f;">Onions · CA + ID + WA + NM; Peru Starts</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="August">
+  <td><span class="wk-num">W34</span><br><span class="wk-dates">Aug 17–23</span></td>
+  <td><span class="month-tag">August</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + MI Harvest; Back-to-School</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Season Wrapping</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · CA PEAK</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · NC Harvest Start; Summer Promos</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ + NM + NC PEAK</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="August">
+  <td><span class="wk-num">W35</span><br><span class="wk-dates">Aug 24–30</span></td>
+  <td><span class="month-tag">August</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA/MI Harvest; NY Soon</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA + BC Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA Peak</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · MULTI-STATE PEAK</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · S. CA + N. CA Peak</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · NC Harvest; CA Growing</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Mushrooms · CA Peak Season</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="September">
+  <td><span class="wk-num">W36</span><br><span class="wk-dates">Aug 31–Sep 6</span></td>
+  <td><span class="month-tag">September</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + NY + MI Harvest; Fall Promos</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA/OR Wrap; Mexico+Peru+Uruguay Start</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA All Regions</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · WA Season Ends; CA Plums/Pluots</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Monterey CA Peak</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Peru Peak Season (Sep–Dec)</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Tapering; AZ Transition</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Labor Day — Corn, Onions, Tomatoes, Mushrooms; National Organic Month; National Mushroom Month; National Fruits & Veggies Month</span></td>
+</tr><tr data-month="September">
+  <td><span class="wk-num">W37</span><br><span class="wk-dates">Sep 7–13</span></td>
+  <td><span class="month-tag">September</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak Continues</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + NY + MI Fall Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA/OR ending; Mexico+Peru Start</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Brazil Starts; Mexico Winding</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ + NM + NC PEAK</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Field · S. CA Peak; N. CA Shoulders</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Mexico Hermosillo + TN Avail</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Salinas Ending; AZ Transition</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 SEPC Southern Innovations · Nashville</span> <span class="chip moment-chip">⭐ National Fruits & Veggies Month; National Family Meals Month</span> <span class="chip trans-chip">🔄 Salinas → Yuma/Arizona Transition</span></td>
+</tr><tr data-month="September">
+  <td><span class="wk-num">W38</span><br><span class="wk-dates">Sep 14–20</span></td>
+  <td><span class="month-tag">September</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + NY + MI Fall Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · WA/BC ending; Mexico+Peru+Argentina</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Monterey CA Peak</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA + AZ Peak; Multi-State</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Protected Ag · Mexico Peak</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · NC Harvest; CA Available</span> <span class="chip" style="background:#f3e5f5;color:#6a1b9a;">Asparagus · Peru Peak</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="September">
+  <td><span class="wk-num">W39</span><br><span class="wk-dates">Sep 21–27</span></td>
+  <td><span class="month-tag">September</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA + NY + MI Fall</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Mexico+Peru+Uruguay+Argentina</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Raspberries · CA All Regions; Mexico Steady</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Monterey Peak</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Mexico + TN</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Brazil Peak</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Transition Varieties</span></td>
+  <td class="chips-cell"><span class="chip trans-chip">🔄 Salinas → Yuma/Desert Transition Complete</span></td>
+</tr><tr data-month="October">
+  <td><span class="wk-num">W40</span><br><span class="wk-dates">Sep 28–Oct 4</span></td>
+  <td><span class="month-tag">October</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA+NY+MI Fall PEAK; National Apple Month</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Mid-Heavy; Chile+Colombia</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile+Mexico+Peru+Argentina</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Monterey PEAK; Holiday Promos</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · CA Winding; Mexico + FL Kick Off</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Squash · Mexico + Guatemala</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · AZ/Desert Transition</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Halloween prep — Squash, Pumpkins, Apples, Corn; National Apple Month</span> <span class="chip trans-chip">🔄 Lettuce → Yuma Arizona begins</span></td>
+</tr><tr data-month="October">
+  <td><span class="wk-num">W41</span><br><span class="wk-dates">Oct 5–11</span></td>
+  <td><span class="month-tag">October</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA+NY+MI Fall Harvest</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; Chile+Colombia</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile+Mexico+Argentina Peak</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico PEAK Oct–Nov</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Peppers · Mexico PEAK Oct–Nov</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · NC Harvest; Holiday Promos Start</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Brazil Peak; Ecuador Starts</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Organic Grower Summit Outreach begins</span></td>
+</tr><tr data-month="October">
+  <td><span class="wk-num">W42</span><br><span class="wk-dates">Oct 12–18</span></td>
+  <td><span class="month-tag">October</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA/NY/MI Fall; Chile+NZ Storage</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico PEAK</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · Monterey PEAK</span> <span class="chip" style="background:#e0f7fa;color:#00838f;">Watermelons · S. Carolina + Mexico</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Pears · WA All Varieties</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · Holiday Promos</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 IFPA Global Produce & Floral Show · Orlando</span> <span class="chip moment-chip">⭐ Halloween; Breast Cancer Awareness Month</span></td>
+</tr><tr data-month="October">
+  <td><span class="wk-num">W43</span><br><span class="wk-dates">Oct 19–25</span></td>
+  <td><span class="month-tag">October</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Peak</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA/NY/MI Fall; Holiday Season Builds</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico+Canada PEAK</span> <span class="chip" style="background:#fbe9e7;color:#bf360c;">Bell Peppers · Mexico+FL+AZ</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA PEAK; Holiday</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navels+Grapefruit+Limes</span> <span class="chip" style="background:#ffebee;color:#c62828;">Tomatoes Protected Ag · Mexico Peak→Shoulders</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Pharr International Bridge — Produce Season Kickoff</span> <span class="chip moment-chip">⭐ Begin FPAA SWIPE Outreach</span> <span class="chip trans-chip">🔄 Mexico+Texas Growing Region Kickoff approaching</span></td>
+</tr><tr data-month="November">
+  <td><span class="wk-num">W44</span><br><span class="wk-dates">Oct 26–Nov 1</span></td>
+  <td><span class="month-tag">November</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA/NY/MI Storage; Fall Promos</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; Chile+Dom. Republic</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile Starts Late Oct</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile+Mexico+Argentina</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA PEAK; Holiday Season</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ PEAK</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · PEAK Holiday Promos</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navels Begin; Grapefruit</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Arizona Leafy Greens Month; National Pomegranate Month</span> <span class="chip trans-chip">🔄 Texas+Mexico Growing Season Starts</span></td>
+</tr><tr data-month="November">
+  <td><span class="wk-num">W45</span><br><span class="wk-dates">Nov 2–8</span></td>
+  <td><span class="month-tag">November</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Apples · WA/NY/MI+Chile/NZ Storage</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile Ramping</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile+Mexico+Peru</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · CA Winding; Mexico Steady; FL Starts</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA PEAK</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Mexico+Lit Culture Peak</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Brazil Ending; Ecuador Avail</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="November">
+  <td><span class="wk-num">W46</span><br><span class="wk-dates">Nov 9–15</span></td>
+  <td><span class="month-tag">November</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Apples · Storage+Fall Promos</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; Chile+Dom. Republic</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile+Argentina</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile+Mexico+Peru</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL Ramping; Mexico Steady</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA PEAK; Thanksgiving Promos</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ Peak</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · Thanksgiving PEAK</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ National Philanthropy Day (Nov 15)</span></td>
+</tr><tr data-month="November">
+  <td><span class="wk-num">W47</span><br><span class="wk-dates">Nov 16–22</span></td>
+  <td><span class="month-tag">November</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Apples · Storage; Thanksgiving Promos</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile+Argentina</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile+Argentina+Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL+Mexico</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA PEAK</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · PEAK Holiday Promos</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Pears · WA All Varieties</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Thanksgiving Week — Potatoes, Brussels Sprouts, Sweet Potatoes, Carrots, Apples, Cranberries</span></td>
+</tr><tr data-month="November">
+  <td><span class="wk-num">W48</span><br><span class="wk-dates">Nov 23–29</span></td>
+  <td><span class="month-tag">November</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#fff3e0;color:#e65100;">Apples · Storage; Holiday Promos</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile Volumes Ramp</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL+Mexico</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA PEAK</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ Peak</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Canada/US Lit Culture PEAK</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navel; Cara Cara Approaching</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="December">
+  <td><span class="wk-num">W49</span><br><span class="wk-dates">Nov 30–Dec 6</span></td>
+  <td><span class="month-tag">December</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; Chile+Colombia</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile Peak Holiday Demand</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak; Mexico Avail</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL Steady; Mexico Steady; CA Low</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Winding</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ PEAK</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · Holiday Promos</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Pears · WA — National Pear Month</span></td>
+  <td class="chips-cell"><span class="chip show-chip">📍 Organic Grower Summit · Monterey</span> <span class="chip show-chip">📍 Begin Southern Exposure Outreach</span> <span class="chip moment-chip">⭐ National Pear Month; Christmas Prep — Brussels Sprouts, Potatoes, Green Beans</span></td>
+</tr><tr data-month="December">
+  <td><span class="wk-num">W50</span><br><span class="wk-dates">Dec 7–13</span></td>
+  <td><span class="month-tag">December</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile Holiday Peak; Argentina Ramping</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL+Mexico</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navels+Cara Cara+Blood+Mandarin PEAK</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ PEAK</span> <span class="chip" style="background:#e3f2fd;color:#1565c0;">Greenhouse Tomatoes · Lit Culture PEAK</span> <span class="chip" style="background:#f1f8e9;color:#558b2f;">Mangos · Ecuador+Peru Starts</span></td>
+  <td class="chips-cell"><span class="empty">—</span></td>
+</tr><tr data-month="December">
+  <td><span class="wk-num">W51</span><br><span class="wk-dates">Dec 14–20</span></td>
+  <td><span class="month-tag">December</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; Chile</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile PEAK; Argentina Builds</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak; Uruguay Wrapping</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL+Mexico; FL Mid-Dec Start</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Specialty Varieties PEAK</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Stonefruit · Chile Season Begins</span> <span class="chip" style="background:#e0f2f1;color:#00695c;">Brussels Sprouts · CA; Holiday Promos</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes · PEAK Holiday</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ Christmas — Brussels Sprouts, Potatoes, Green Beans, Berries</span></td>
+</tr><tr data-month="December">
+  <td><span class="wk-num">W52</span><br><span class="wk-dates">Dec 21–27</span></td>
+  <td><span class="month-tag">December</span></td>
+  <td class="chips-cell"><span class="chip" style="background:#f1f8e9;color:#558b2f;">Avocados · Mexico Heavy; Chile; Colombia</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Cherries · Chile PEAK Holiday</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Blueberries · Chile Peak</span> <span class="chip" style="background:#fce4ec;color:#b71c1c;">Strawberries · FL+Mexico</span> <span class="chip" style="background:#e8f5e9;color:#2e7d32;">Lettuce · Yuma AZ PEAK</span> <span class="chip" style="background:#fffde7;color:#f57f17;">Citrus · CA Navels+Specialty Varieties</span> <span class="chip" style="background:#fff3e0;color:#e65100;">Table Grapes · CA Late Season Winding</span> <span class="chip" style="background:#efebe9;color:#5d4037;">Sweet Potatoes+Potatoes · Holiday Storage</span></td>
+  <td class="chips-cell"><span class="chip moment-chip">⭐ New Year's Resolution Content — Health, Wellness, Fresh Produce</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<script>
+const btns = document.querySelectorAll('.mbtn');
+const rows = document.querySelectorAll('#cal-body tr');
+btns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const m = btn.dataset.m;
+    rows.forEach(r=>{
+      r.classList.toggle('hidden', m!=='all' && r.dataset.month!==m);
+    });
+  });
+});
+</script>
+</body>
+</html>
